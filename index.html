@@ -1,0 +1,448 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>HJ personal care homepage</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<!-- <noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-wide.css" />
+		</noscript> -->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+<!-- rss피드를 위한 자바 스크립트[시작] -->	
+<script>
+function showRSS(str) {
+    if (str.length==0) {
+        document.getElementById("rssOutput").innerHTML="";
+        return;
+    }
+    if (window.XMLHttpRequest) {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+    } else {  // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.onreadystatechange=function() {
+        if (this.readyState==4 && this.status==200) {
+            document.getElementById("rssOutput").innerHTML=this.responseText;
+        }
+    }
+    xmlhttp.open("GET","getrss.php?q="+str,true);
+    xmlhttp.send();
+}
+</script>
+<!-- rss피드를 위한 자바 스크립트[끝] -->
+
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+			<div class="wrapper style1">
+
+				<!-- Header -->
+					<div id="header" class="skel-panels-fixed">
+						<div id="logo">
+							<h1><a href="index.html">NEWS</a></h1>
+							<span class="tag">just for you</span>
+						</div>
+						<nav id="nav">
+							<ul>
+								<li class="active"><a href="index.html">처음으로</a></li>
+								<li><a href="./phpgallery/index.php">daily recode with picture</a></li>
+								<li><a href="./weather/index.php">weather</a></li>
+								<li><a href="no-sidebar.html">No Sidebar</a></li>
+							</ul>
+						</nav>
+					</div>
+
+				<!-- Banner -->
+					<div id="banner" class="container">
+						<section>
+							<div id="rssOutput">해당 신문 Load position</div>
+							<a href="http://localhost/newsaggregator/templated-phaseshift" class="button medium">신문 닫기</a>
+						</section>
+					</div>
+				<!-- Extra -->
+					<div id="extra">
+						<div class="container">
+							<div class="row no-collapse-1">
+						<!-- 박스1 시작[중앙일보] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				
+										<div onmousedown="showRSS('joongang')">
+										<a href="#" class="button"> 
+  										중앙일보
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 1끝[중앙일보] -->
+						<!-- 박스2 시작[조선일보] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				
+										<div onmousedown="showRSS('chosun')">
+  										<a href="#" class="button"> 
+  										조선일보
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 2끝[조선일보] -->
+						<!-- 박스3 시작[동아일보] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 										 				
+										<div onmousedown="showRSS('donga')">
+										<a href="#" class="button"> 
+  										동아일보
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 3끝[동아일보] -->
+						<!-- 박스4 시작[현대건강신문] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 										 				
+										<div onmousedown="showRSS('hnews')">
+										<a href="#" class="button"> 
+  										현대건강신문
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 4끝[현대건강신문] -->
+							<!-- 박스5 시작[한국정신건강신문] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 										 				
+										<div onmousedown="showRSS('mentalnews')">
+										<a href="#" class="button"> 
+  										한국정신건강신문
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 5끝[한국정신건강신문] -->
+							</div> <!-- end of row no-collapse-1 --> 
+							
+							<div class="row no-collapse-1">
+							
+								<!-- 박스6 시작[헬스코리아뉴스] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 						 				
+										<div onmousedown="showRSS('hkn24')">
+										<a href="#" class="button"> 
+  										헬스 코리아 뉴스
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스6끝[헬스코리아뉴스] -->
+								<!-- 박스7시작[헬스데이뉴스] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 						 				
+										<div onmousedown="showRSS('healthdaynews')">
+										<a href="#" class="button"> 
+  										헬스데이 뉴스
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스7끝[헬스데이뉴스] -->
+								<!-- 박스8 시작[헬스경향] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 						 				
+										<div onmousedown="showRSS('khealth')">
+										<a href="#" class="button"> 
+  										헬스 경향
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스8끝[헬스경향] -->
+							 	<!-- 박스9시작[헬스프레스] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 					 				
+										<div onmousedown="showRSS('healthpress')">
+										<a href="#" class="button"> 
+  										헬스 프레스
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스9끝[헬스프레스] -->
+								
+							</div><!-- end of row no-collapse-1 -->
+						</div> <!-- end of container -->
+					</div> <!-- end of extra -->
+<br><br><br>
+<!-- #다이어트#여성#20대#30대#웨이트트레이닝#식단#댄스#새로운 운동법#패션 --> 
+<!-- Extra1 -->
+					<div id="extra">
+						<div class="container">
+							<div class="row no-collapse-1">
+						<!-- 박스1 시작  하이퍼링크로만 구성[제품검색] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				<div >
+						 				<a class="button" href="http://www.foodsafetykorea.go.kr/portal/healthyfoodlife/searchHomeHF.do?menu_no=914&menu_grp=MENU_GRP02">식품안전포탈[건강기능식품검색]</a>
+						 				</div>
+						 				<!-- <div onmousedown="showRSS('chosun')">
+  										<a href="#" class="button"> 
+  										조선일보
+  										  										</a>
+  										</div> -->
+										  <!--</div>
+								</section> -->
+								<!-- 박스 1끝   하이퍼링크로만 구성[제품검색] -->
+						<!-- 박스2 시작   하이퍼링크로만 구성[식품영양성분검색] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				<div >
+						 				<a class="button" href="http://www.foodsafetykorea.go.kr/portal/healthyfoodlife/foodnutrient/simpleSearch.do?menu_no=403&menu_grp=MENU_GRP02&=http%3A%2F%2Fwww.foodsafetykorea.go.kr%3A80%2Fportal%2Fhealthyfoodlife%2Ffoodnutrient%2FsimpleSearch.do%3Fmenu_no%3D403%26menu_grp%3DMENU_GRP02&code4=1&code2=&search_name=%EB%B0%A5&=&=&=&=1&=&=%EB%B0%A5&=&=&=&=&=&=&=0">식품안전포탈[식품영양성분자료검색]</a>
+						 				</div>						 				
+										<!-- <div onmousedown="showRSS('donga')">
+										<a href="#" class="button"> 
+  										동아일보
+  										</a>
+  										</div> -->
+										  <!--</div>
+								</section> -->
+								<!-- 박스2끝  하이퍼링크로만 구성[식품영양성분검색] -->
+							</div> <!-- end of row no-collapse-1 --> 
+							
+							<div class="row no-collapse-1">
+						<!-- 박스3 시작 하이퍼링크[제철음식 포스트] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				<div >
+						 				<a class="button" href="http://blog.naver.com/neotozsc/220838064586">제철음식[가을]</a>
+						 				</div>						 				
+										<!-- <div onmousedown="showRSS('hnews')">
+										<a href="#" class="button"> 
+  										현대건강신문
+  										</a>
+  										</div> -->
+										  <!--</div>
+								</section> -->
+								<!-- 박스 3끝 하이퍼링크[제철음식 포스트] -->
+							<!-- 박스4 시작[건강정보] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 										 				
+										<div onmousedown="showRSS('healthinfo')">
+										<a href="#" class="button"> 
+  										건강정보
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스 4끝[한국정신건강신문] -->
+													
+								<!-- 박스5 시작[건강을 위한 발걸음] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 						 				
+										<div onmousedown="showRSS('steptohealth')">
+										<a href="#" class="button"> 
+  										건강을 위한 발걸음
+  										</a>
+  										</div>
+										  <!--</div>
+								</section> -->
+								<!-- 박스5끝[건강을 위한 발걸음] -->
+								<!-- 박스6시작 하이퍼링크[bodybuilding.com] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 					<div >
+						 				<a class="button" href="https://www.bodybuilding.com/fun/beginning-bodyweight-strength-training-for-women">여성홈트레이닝[크롬으로 번역하여 볼것!]</a>
+						 				</div>		 				
+									<!-- 	<div onmousedown="showRSS('healthdaynews')">
+										<a href="#" class="button"> 
+  										bodybuilding.com
+  										</a>
+  										</div> -->
+										  <!--</bodybuilding.com>
+								</section> -->
+								<!-- 박스6끝 하이퍼링크[bodybuilding.com] -->
+								<!-- 박스7시작 하이퍼링크[줌바 재생목록] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				 	
+						 				<div >
+						 				<a class="button" href="https://www.youtube.com/watch?v=sW5GKjPasFk&list=PLpTzWtYX-XYTIipJ1lp9NoWSEEgOiVuxf">줌바 모음[youtube]</a>
+						 				</div>				
+										<!-- <div onmousedown="showRSS('healthpress')">
+										<a href="#" class="button"> 
+  										헬스 프레스
+  										</a>
+  										</div> -->
+										  <!--</div>
+								</section> -->
+								<!-- 박스7끝 하이퍼링크[줌바재생목록] -->
+								
+								<!-- 박스8 시작 하이퍼링크[zumba] -->
+								<!-- <section class="4u"> <a href="#" class="image featured"><img src="images/chosun.png" alt=""></a>
+									<div class="box">-->
+						 				<iframe width="560" height="315" src="https://www.youtube.com/embed/sW5GKjPasFk" frameborder="0" allowfullscreen></iframe>		 				
+										<!-- <div onmousedown="showRSS('khealth')">
+										<a href="#" class="button"> 
+  										헬스 경향
+  										</a>
+  										</div> -->
+										  <!--</div>
+								</section> -->
+								<!-- 박스8끝 하이퍼링크[zumba] -->
+							 	
+							</div><!-- end of row no-collapse-1 -->
+						</div> <!-- end of container -->
+					</div> <!-- end of extra2 -->
+
+				<!-- Main -->
+					<div id="main">
+						<div class="container">
+							<div class="row"> 
+								
+								<!-- Content -->
+								<div class="6u">
+									<section>
+										<ul class="style">
+											<li class="fa fa-wrench">
+												<h3>빈야사 요가<br>[퇴근後 월.수.금]</h3>
+<!-- 동영상1 삽입 구문 시작 -->
+	<div id="player1"></div>
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      var player1;
+      function onYouTubeIframeAPIReady() {
+        player1 = new YT.Player('player1', {
+          height: '200',
+          width: '300',
+          videoId: 'HmZFwoUU3WQ',
+          
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+    
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+     
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+    </script>
+    <div>rss: https://www.youtube.com/watch?time_continue=37&v=HmZFwoUU3WQ</div>
+    <!-- 동영상1 삽입 구문 끝-->
+
+												</span> </li>
+											<li class="fa fa-leaf">
+												<h3>홈트레이닝<br>[퇴근後 화.목.토]</h3>
+												<span>
+<!-- 동영상2 삽입구문 시작 -->				
+								
+<iframe width="300" height="200" src="https://www.youtube.com/embed/Hp39axsuFs8" frameborder="0" allowfullscreen>
+</iframe>
+<div>rss: https://www.youtube.com/watch?v=Hp39axsuFs8</div>	
+<!-- 동영상2 삽입구문 끝 -->								
+</span> </li>
+										</ul>
+									</section>
+								</div>
+								<div class="6u">
+									<section>
+										<ul class="style">
+											<li class="fa fa-cogs">
+												<h3>코어강화운동<br>[주 5회]</h3>
+												<span>
+<!-- 동영상3 삽입구문 시작 -->												
+<iframe width="300" height="200" src="https://www.youtube.com/embed/TvxNkmjdhMM" frameborder="0" allowfullscreen>
+</iframe>
+<div>rss: https://www.youtube.com/watch?v=TvxNkmjdhMM</div>		
+<!-- 동영상3 삽입구문 끝 -->	
+												</span> </li>
+											<li class="fa fa-road">
+												<h3>workout soundtrack for<br>♛HAE-JIN♛</br></h3>
+												<span>
+<!-- 노래 재생목록[시작] -->												
+<audio controls>
+  <source src="./soundtrack/allfiles.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<!-- 노래 재생목록[끝] -->
+												</span> </li>
+												
+										</ul>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+
+	</div>
+
+	<!-- Footer -->
+		<div id="footer" class="wrapper style2">
+			<div class="container">
+				<section>
+					<header class="major">
+						<h2>문의사항 </h2>
+						<span class="byline">아래 양식을 작성하여 메일을 보내 주시면, 빠른 시일내에 답변드리겠습니다. </span>
+					</header>	
+					<form>
+					<!-- 이메일 [시작] -->
+					<!-- www.123contactform.com script begins here -->
+<script type="text/javascript" defer src="//www.123contactform.com/embed/3068367.js" data-role="form" data-default-width="650px"></script>
+					<!-- 이메일 [끝] -->
+					</form>
+				</section>
+			</div>
+		</div>
+
+	<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<div class="copyright">
+					<p>Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)</p>
+					<ul class="icons">
+						<li><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
+						<li><a href="#" class="fa fa-twitter"><span>Twitter</span></a></li>
+						<li><a href="#" class="fa fa-google-plus"><span>Google+</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
